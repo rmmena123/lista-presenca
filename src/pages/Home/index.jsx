@@ -26,7 +26,7 @@ export function Home() {
       <h1>Lista de Presença</h1>
       <input
         type="text"
-        placeholder="Digite o nome..."
+        placeholder="Digite o nome"
         onChange={(e) => setStudentName(e.target.value)}
       />
       <button type="button" onClick={handleAddStudent}>
@@ -34,7 +34,7 @@ export function Home() {
       </button>
 
       {students.map((student) => (
-        <Card name={student.name} time={student.time} />
+        <Card key={student.time} name={student.name} time={student.time} />
       ))}
     </div>
   );
